@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak & Ulasan - Taste of Italy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+
+<body class="font-sans antialiased bg-gray-100 text-gray-800">
+
+    <header class="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-4 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold flex items-center">
+                <i class="fas fa-pizza-slice mr-2"></i> Taste of Italy
+            </a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./index.html" class="nav-link">Beranda</a></li>
+                <li><a href="./kuliner.html" class="nav-link">Kuliner</a></li>
+                <li><a href="./detail.html" class="nav-link">Detail</a></li>
+                <li><a href="./galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="./kontak.html" class="nav-link active">Kontak & Ulasan</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-red-700 mt-2 rounded-md shadow-lg">
+            <ul class="flex flex-col">
+                <li><a href="index.html" class="block py-2 px-4 text-white hover:bg-red-800 rounded-t-md">Beranda</a>
+                </li>
+                <li><a href="destinasi.html" class="block py-2 px-4 text-white hover:bg-red-800">Destinasi</a></li>
+                <li><a href="galeri.html" class="block py-2 px-4 text-white hover:bg-red-800">Galeri</a></li>
+                <li><a href="kuliner.html" class="block py-2 px-4 text-white hover:bg-red-800">Kuliner</a></li>
+                <li><a href="kontak.html" class="block py-2 px-4 text-white hover:bg-red-800 rounded-b-md">Kontak &
+                        Ulasan</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container mx-auto my-12 p-8 bg-white rounded-xl shadow-2xl">
+        <section class="text-center mb-12">
+            <h1 class="text-5xl font-extrabold text-red-700 mb-4">Hubungi Kelezatan Italia</h1>
+            <p class="text-xl text-gray-600">Berikan ulasan Anda dan sampaikan pesan kepada kami!</p>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="bg-gray-50 p-8 rounded-lg shadow-xl">
+                <h2 class="text-3xl font-bold text-red-700 mb-6 flex items-center">
+                    <i class="fas fa-envelope mr-3"></i> Kirim Pesan Anda
+                </h2>
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Nama Lengkap</label>
+                        <input type="text" id="name" name="name"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                            placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                            placeholder="Masukkan email Anda" required>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-gray-700 text-sm font-semibold mb-2">Subjek</label>
+                        <input type="text" id="subject" name="subject"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                            placeholder="Subjek pesan Anda" required>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">Pesan</label>
+                        <textarea id="message" name="message" rows="5"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500"
+                            placeholder="Tulis pesan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-red-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-red-700 transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i> Kirim Pesan
+                    </button>
+                    <div id="contactMessage" class="mt-4 p-3 bg-red-100 rounded-md text-gray-800 hidden text-center">
+                    </div>
+                </form>
+            </div>
+
+            <div class="bg-yellow-50 p-8 rounded-lg shadow-xl">
+                <h2 class="text-3xl font-bold text-yellow-700 mb-6 flex items-center">
+                    <i class="fas fa-star mr-3"></i> Berikan Ulasan Anda
+                </h2>
+                <form id="reviewForm" class="space-y-6">
+                    <div>
+                        <label for="reviewerName" class="block text-gray-700 text-sm font-semibold mb-2">Nama
+                            Anda</label>
+                        <input type="text" id="reviewerName" name="reviewerName"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
+                            placeholder="Nama Anda" required>
+                    </div>
+                    <div>
+                        <label for="reviewEmail" class="block text-gray-700 text-sm font-semibold mb-2">Email</label>
+                        <input type="email" id="reviewEmail" name="reviewEmail"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
+                            placeholder="Email Anda" required>
+                    </div>
+                    <div>
+                        <label for="itemReviewed"
+                            class="block text-gray-700 text-sm font-semibold mb-2">Kuliner/Destinasi yang Diulas</label>
+                        <input type="text" id="itemReviewed" name="itemReviewed"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
+                            placeholder="Contoh: Pizza Napoletana, Roma" required>
+                    </div>
+                    <div>
+                       <div class="mb-4">
+    <label for="ratingValue" class="block font-semibold mb-2 text-gray-800">Rating (1–5)</label>
+    <input type="number" id="ratingValue" name="rating" min="1" max="5"
+        class="w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
+        placeholder="Masukkan angka 1 sampai 5" required>
+</div>
+
+                    </div>
+                    <div>
+                        <label for="reviewMessage" class="block text-gray-700 text-sm font-semibold mb-2">Ulasan
+                            Anda</label>
+                        <textarea id="reviewMessage" name="reviewMessage" rows="5"
+                            class="w-full p-3 border border-gray-300 rounded-md focus:ring-yellow-500 focus:border-yellow-500"
+                            placeholder="Tulis ulasan Anda di sini..." required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-yellow-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-700 transition duration-300 ease-in-out flex items-center justify-center">
+                        <i class="fas fa-feather-alt mr-2"></i> Kirim Ulasan
+                    </button>
+                    <div id="reviewMessage" class="mt-4 p-3 bg-yellow-100 rounded-md text-gray-800 hidden text-center">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto text-center">
+            <p class="text-lg">© <span id="current-year"></span> Taste of Italy. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 text-2xl">
+                <a href="#" class="hover:text-red-400 transition-colors" aria-label="Facebook"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-red-400 transition-colors" aria-label="Instagram"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-400 transition-colors" aria-label="Twitter"><i
+                        class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-sm mt-4">Dibuat dengan cinta untuk para pecinta kuliner Italia.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>

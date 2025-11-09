@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Taste of Italy</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./kuliner.html">
+    <link rel="stylesheet" href="./detail.html">
+    <link rel="stylesheet" href="./galeri.html">
+    <link rel="stylesheet" href="./kontak.html">
+</head>
+<body class="font-sans antialiased bg-red-100 text-gray-800">
+
+     <header class="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-4 shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="index.html" class="text-3xl font-extrabold flex items-center">
+                <i class="fas fa-pizza-slice mr-2"></i> Taste of Italy
+            </a>
+            <ul class="hidden md:flex space-x-6">
+                <li><a href="./index.html" class="nav-link">Beranda</a></li>
+                <li><a href="./kuliner.html" class="nav-link">Kuliner</a></li>
+                <li><a href="./detail.html" class="nav-link">Detail</a></li>
+                <li><a href="./galeri.html" class="nav-link">Galeri</a></li>
+                <li><a href="./kontak.html" class="nav-link active">Kontak & Ulasan</a></li>
+            </ul>
+            <button id="mobile-menu-button" class="md:hidden text-white text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="md:hidden hidden bg-red-700 mt-2 rounded-md shadow-lg">
+            <ul class="flex flex-col">
+                <li><a href="index.html" class="block py-2 px-4 text-white hover:bg-red-800 rounded-t-md">Beranda</a>
+                </li>
+                <li><a href="destinasi.html" class="block py-2 px-4 text-white hover:bg-red-800">Destinasi</a></li>
+                <li><a href="galeri.html" class="block py-2 px-4 text-white hover:bg-red-800">Galeri</a></li>
+                <li><a href="kuliner.html" class="block py-2 px-4 text-white hover:bg-red-800">Kuliner</a></li>
+                <li><a href="kontak.html" class="block py-2 px-4 text-white hover:bg-red-800 rounded-b-md">Kontak & Ulasan</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-cover bg-center h-screen flex items-center justify-center text-white text-center" style="background-image: url(./assets/img/italia.png);">
+            <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            <div class="relative z-10 p-6 max-w-4xl">
+                <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-4 animate-fade-in-up">Selami Dunia Kuliner Italia</h1>
+                <p class="text-xl md:text-3xl mb-8 font-light animate-fade-in-up delay-200">Setiap hidangan adalah cerita, setiap gigitan adalah perjalanan. Temukan keajaiban rasa yang tak tertandingi.</p>
+            </div>
+        </section>
+
+        <section class="container mx-auto my-16 p-8 bg-red-50 rounded-xl shadow-2xl">
+            <h2 class="text-4xl font-bold text-center mb-12 text-red-700">Rasa Otentik dari Jantung Italia</h2>
+            <div class="flex flex-col md:flex-row justify-around items-center gap-10">
+                <article class="flex-1 text-center p-6 bg-red-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 min-w-0 max-w-md">
+                    <i class="fas fa-pizza-slice text-5xl text-red-500 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Pizza Napoletana Asli</h3>
+                    <p class="text-gray-700">Nikmati kelezatan pizza dengan adonan tipis renyah dan topping segar langsung dari resep turun-temurun Naples.</p>
+                </article>
+                <article class="flex-1 text-center p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 min-w-0 max-w-md">
+                    <i class="fas fa-utensils text-5xl text-yellow-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Pasta Klasik Abadi</h3>
+                    <p class="text-gray-700">Dari Carbonara yang creamy hingga Lasagna yang kaya rasa, setiap pasta dibuat dengan passion dan bahan terbaik.</p>
+                </article>
+                <article class="flex-1 text-center p-6 bg-green-50 rounded-lg shadow-md hover:shadow-xl transform hover:-translate-y-2 transition duration-300 min-w-0 max-w-md">
+                    <i class="fas fa-ice-cream text-5xl text-green-600 mb-4"></i>
+                    <h3 class="text-2xl font-semibold mb-3">Dessert & Gelato Segar</h3>
+                    <p class="text-gray-700">Akhiri petualangan rasa Anda dengan Tiramisu manis atau Gelato lembut yang meleleh di lidah.</p>
+                </article>
+            </div>
+            <div class="text-center mt-12">
+                <a href="./kuliner.html" class="inline-block bg-red-600 text-white px-10 py-4 rounded-full text-lg font-bold shadow-lg hover:bg-red-700 transform hover:scale-105 transition duration-300">Lihat Semua Kuliner Kami</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gradient-to-r from-red-600 to-yellow-500 text-white p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto text-center">
+            <p class="text-lg">&copy; <span id="current-year"></span> Taste of Italy. All rights reserved.</p>
+            <div class="flex justify-center space-x-6 mt-4 text-2xl">
+                <a href="#" class="hover:text-red-400 transition-colors" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="hover:text-red-400 transition-colors" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-red-400 transition-colors" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-sm mt-4">Dibuat dengan cinta untuk para pecinta kuliner Italia.</p>
+        </div>
+    </footer>
+
+    <script src="./css/js/index.js"></script>
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
